@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التسجيل</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(RED.jpg) !important;
+            color:white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgb(173, 36, 36);
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+            width: 377px;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: 0 0 10px rgb(173, 36, 36);
+        }
+
+        button {
+            background-color: rgb(84, 14, 14);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: rgb(35, 6, 6);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form action="register.php" method="POST">
+            
+            <div class="form-group">
+                <label for="nomUser">Full Name :</label><br><BR>
+                <input type="text" id="nomUser" name="nomUser" required>
+
+            </div>
+            <div class="form-group">
+                <label for="prenomUser">Last Name :</label><br><BR>
+                <input type="text" id="prenomUser" name="prenomUser" required>
+            </div>
+            <div class="form-group">
+                <label for="mailUser">Your Email :</label><br><BR>
+                <input type="email" id="mailUser" name="mailUser" required>
+            </div>
+            <div class="form-group">
+                <label for="passwordUser">password :</label><br><BR>
+                <input type="password" id="passwordUser" name="passwordUser" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
